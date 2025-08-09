@@ -29,7 +29,6 @@ plugins {
 val targetJavaVersion = JavaVersion.VERSION_24
 
 allprojects {
-  version = "1.0"
   group = "eu.cloudnetservice.cloudnet"
 }
 

@@ -1,0 +1,128 @@
+name: "CI"
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release:
+        description: "Publish Release"
+        type: boolean
+        default: false
+
+concurrency:
+  cancel-in-progress: true
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build ${{ matrix.mc_version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        mc_version:
+          - 1.21.6
+    outputs:
+      version: ${{ steps.resolve_variables.outputs.version }}
+    steps:
+      - name: Resolve variables
+        id: resolve_variables
+        run: |
+          MC_VERSION="${{ matrix.mc_version }}"
+          echo "PROJECT_NAME=v${MC_VERSION//./_}" >> $GITHUB_ENV
+          echo "OUTPUT_FILE_NAME=bridge_${MC_VERSION//./}.jar" >> $GITHUB_ENV
+
+          CALVER_BASE=$(date +"%Y.%m.%d")
+          SHORT_COMMIT_SHA=$(cut -c1-10 <<< "${{ github.sha }}")
+          echo "version=$CALVER_BASE-$SHORT_COMMIT_SHA" >> $GITHUB_OUTPUT
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 24
+          check-latest: true
+          distribution: 'zulu'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        env:
+          GRADLE_BUILD_ACTION_CACHE_KEY_PREFIX: ${{ matrix.mc_version }}/
+        with:
+          add-job-summary: always
+          cache-cleanup: on-success
+          cache-read-only: ${{ github.ref != 'refs/heads/main' }}
+          # automatically publishes build scans for the main branch
+          build-scan-publish: ${{ github.ref == 'refs/heads/main' }}
+          build-scan-terms-of-use-agree: yes
+          build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
+
+      - name: Setup Loom cache
+        uses: actions/cache@v4
+        with:
+          path: '.gradle/loom-cache'
+          restore-keys: ${{ runner.os }}-${{ matrix.mc_version }}-gradle-loom-
+          key: ${{ runner.os }}-${{ matrix.mc_version }}-gradle-loom-${{ hashFiles('gradle/libs.versions.toml', 'gradle/wrapper/gradle-wrapper.properties') }}
+
+      - name: Run build
+        run: ./gradlew :${{ env.PROJECT_NAME }}:build -Pversion=${{ steps.resolve_variables.outputs.version }} --stacktrace
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          retention-days: 1
+          name: cloudnet_version_bridge_${{ env.PROJECT_NAME }}
+          path: ${{ env.PROJECT_NAME }}/build/libs/${{ env.OUTPUT_FILE_NAME }}
+
+  merge_jars:
+    name: Merge jars
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v5
+        with:
+          path: artifacts/
+
+      - name: Upload merged artifact zip
+        uses: actions/upload-artifact@v4
+        with:
+          path: artifacts/
+          name: cloudnet_version_bridge_merged
+
+  release:
+    name: Publish release
+    needs:
+      - build
+      - merge_jars
+    if: ${{ github.event.inputs.release == 'true' }}
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v5
+        with:
+          path: artifacts/
+          name: cloudnet_version_bridge_merged
+
+      - name: Zip artifacts
+        run: zip cloudnet_fabric_version_bridge_all.zip artifacts/*
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          GH_PROMPT_DISABLED: true
+        run: |
+          gh release create '${{ needs.build.outputs.version }}' cloudnet_fabric_version_bridge_all.zip \
+            --latest \
+            --generate-notes \
+            --fail-on-no-commits \
+            --target '${{ github.sha }}' \
+            --title '${{ needs.build.outputs.version }}'
