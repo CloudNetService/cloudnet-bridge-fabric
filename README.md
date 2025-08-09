@@ -1,0 +1,27 @@
+# CloudNet Bridge Fabric Implementations
+
+![Build](https://github.com/CloudNetService/cloudnet-bridge-fabric/actions/workflows/ci.yml/badge.svg)
+![Release](https://img.shields.io/github/v/release/CloudNetService/cloudnet-bridge-fabric?sort=date&logo=github)
+
+## What is the purpose of this repo?
+
+This repository holds the actual CloudNet-Bridge Fabric implementations for different minecraft versions. Find a table
+of all supported minecraft versions below. **Note**: generally speaking all fabric versions are supported, however, the
+listed versions have extensive support (such as providing player information to the node and bungeecord player info
+forwarding). If you want support for a specific minecraft version, feel free to
+open [an issue](https://github.com/CloudNetService/cloudnet-bridge-fabric/issues/new) or a pull request.
+
+The core bridge mod is still within the main CloudNet repository, this repo only provides the implementations for
+specific minecraft versions.
+
+## Links
+
+- [Support Discord](https://discord.cloudnetservice.eu)
+- [Main CloudNet Repository](https://github.com/CloudNetService/CloudNet)
+- [Issue Tracker](https://github.com/CloudNetService/cloudnet-bridge-fabric/issues)
+- [Latest Release](https://github.com/CloudNetService/cloudnet-bridge-fabric/releases/latest)
+
+## Compile from source
+
+To compile this project you need JDK 24 and an internet connection. Then clone this repository and run `./gradlew build`
+inside the cloned project.
