@@ -112,7 +112,7 @@ jobs:
           name: cloudnet_version_bridge_merged
 
       - name: Zip artifacts
-        run: zip cloudnet_fabric_version_bridge_all.zip artifacts/*
+        run: zip -j cloudnet_fabric_version_bridge_all.zip artifacts/*
 
       - name: Publish release
         env:
