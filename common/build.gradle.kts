@@ -15,6 +15,7 @@
  */
 
 dependencies {
+  compileOnly(libs.fabricMixin)
   compileOnlyApi(libs.cloudnetDriver)
   compileOnlyApi(libs.cloudnetBridge)
   compileOnlyApi(libs.cloudnetWrapper)

@@ -100,6 +100,6 @@ public final class FabricBridgeManagementv1216 extends BaseFabricBridgeManagemen
    */
   @Override
   public @NotNull PlayerExecutor directPlayerExecutor(@NotNull UUID uniqueId) {
-    return null; // TODO: discuss this
+    throw new UnsupportedOperationException("not implemented on fabric");
   }
 }

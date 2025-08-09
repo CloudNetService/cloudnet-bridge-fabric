@@ -9,10 +9,12 @@ fabricLoom = "1.11.4"
 annotations = "26.0.2"
 fabricLoader = "0.17.0"
 cloudnet = "4.0.0-RC14-SNAPSHOT"
+fabricMixin = "0.16.3+mixin.0.8.7"
 
 [libraries]
 
 annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+fabricMixin = { group = "net.fabricmc", name = "sponge-mixin", version.ref = "fabricMixin" }
 fabricLoader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabricLoader" }
 
 cloudnetDriver = { group = "eu.cloudnetservice.cloudnet", name = "driver-api", version.ref = "cloudnet" }

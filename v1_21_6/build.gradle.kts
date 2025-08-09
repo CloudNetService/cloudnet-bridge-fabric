@@ -34,6 +34,10 @@ dependencies {
   })
 }
 
+loom {
+  accessWidenerPath = project.file("src/main/resources/cloudnet_version_bridge.accesswidener")
+}
+
 tasks.remapJar {
   dependsOn(tasks.shadowJar)
   inputFile = tasks.shadowJar.flatMap { it.archiveFile }

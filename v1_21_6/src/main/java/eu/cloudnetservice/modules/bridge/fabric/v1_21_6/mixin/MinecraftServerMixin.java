@@ -38,6 +38,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Environment(EnvType.SERVER)
 @Mixin(MinecraftServer.class)
@@ -99,6 +100,14 @@ public abstract class MinecraftServerMixin implements BridgeAccessorSpec<ServerP
 
     // run post init tasks
     this.cloudnet_bridge$management.postInit();
+  }
+
+  /**
+   * Disables compression between the server and the proxy.
+   */
+  @Inject(at = @At("RETURN"), method = "getCompressionThreshold", cancellable = true)
+  public void cloudnet_bridge$getNetworkCompressionThreshold(@NotNull CallbackInfoReturnable<Integer> ci) {
+    ci.setReturnValue(-1);
   }
 
   /**
