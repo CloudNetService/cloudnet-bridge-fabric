@@ -35,7 +35,7 @@ jobs:
           echo "PROJECT_NAME=v${MC_VERSION//./_}" >> $GITHUB_ENV
           echo "OUTPUT_FILE_NAME=bridge_${MC_VERSION//./}.jar" >> $GITHUB_ENV
 
-          CALVER_BASE=$(date +"%Y.%m.%d")
+          CALVER_BASE=$(date --utc +"%Y.%m.%d")
           SHORT_COMMIT_SHA=$(cut -c1-10 <<< "${{ github.sha }}")
           echo "version=$CALVER_BASE-$SHORT_COMMIT_SHA" >> $GITHUB_OUTPUT
 
