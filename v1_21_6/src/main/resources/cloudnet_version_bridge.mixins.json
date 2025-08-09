@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_16",
+  "package": "eu.cloudnetservice.modules.bridge.fabric.v1_21_6.mixin",
+  "server": [
+    "MinecraftServerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

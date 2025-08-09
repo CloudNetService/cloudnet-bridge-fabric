@@ -1,0 +1,26 @@
+[versions]
+
+# plugins
+shadow = "9.0.0"
+spotless = "7.2.1"
+fabricLoom = "1.11.4"
+
+# libs
+annotations = "26.0.2"
+fabricLoader = "0.17.0"
+cloudnet = "4.0.0-RC14-SNAPSHOT"
+
+[libraries]
+
+annotations = { group = "org.jetbrains", name = "annotations", version.ref = "annotations" }
+fabricLoader = { group = "net.fabricmc", name = "fabric-loader", version.ref = "fabricLoader" }
+
+cloudnetDriver = { group = "eu.cloudnetservice.cloudnet", name = "driver-api", version.ref = "cloudnet" }
+cloudnetBridge = { group = "eu.cloudnetservice.cloudnet", name = "bridge-impl", version.ref = "cloudnet" }
+cloudnetWrapper = { group = "eu.cloudnetservice.cloudnet", name = "wrapper-jvm-api", version.ref = "cloudnet" }
+
+[plugins]
+
+fabricLoom = { id = "fabric-loom", version.ref = "fabricLoom" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }

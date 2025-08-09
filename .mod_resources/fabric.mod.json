@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "cloudnet_version_bridge",
+  "name": "CloudNet Bridge for @mc_version@",
+  "description": "CloudNet Bridge implementation for minecraft @mc_version_range@",
+  "version": "@project_version@",
+  "environment": "server",
+  "license": "Apache-2.0",
+  "entrypoints": {
+    "server": [
+      "eu.cloudnetservice.modules.bridge.fabric.v@mc_version_dashed@.BridgeEntrypoint"
+    ]
+  },
+  "mixins": [
+    "cloudnet_version_bridge.mixins.json"
+  ],
+  "accessWidener": "cloudnet_version_bridge.accesswidener",
+  "depends": {
+    "java": "@target_java_major@",
+    "minecraft": "@mc_version_range@",
+    "fabricloader": ">=@fabric_loader_version@"
+  },
+  "authors": [
+    {
+      "name": "CloudNetService"
+    }
+  ],
+  "contact": {
+    "homepage": "https://cloudnetservice.eu",
+    "discord": "https://discord.cloudnetservice.eu",
+    "sources": "https://github.com/CloudNetService/cloudnet-bridge-fabric",
+    "issues": "https://github.com/CloudNetService/cloudnet-bridge-fabric/issues"
+  }
+}
