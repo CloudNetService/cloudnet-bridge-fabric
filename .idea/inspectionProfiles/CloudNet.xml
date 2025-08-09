@@ -12,7 +12,7 @@
     <inspection_tool class="ExtractMethodRecommender" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="FieldNamingConvention" enabled="true" level="ERROR" enabled_by_default="true">
       <extension name="InstanceVariableNamingConvention" enabled="true">
-        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_regex" value="[a-z][A-Za-z\d$_]*" />
         <option name="m_minLength" value="1" />
         <option name="m_maxLength" value="70" />
       </extension>
@@ -26,7 +26,7 @@
     <inspection_tool class="MissingDeprecatedAnnotation" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="NewMethodNamingConvention" enabled="true" level="ERROR" enabled_by_default="true">
       <extension name="InstanceMethodNamingConvention" enabled="true">
-        <option name="m_regex" value="[a-z][A-Za-z\d]*" />
+        <option name="m_regex" value="[a-z][A-Za-z\d$_]*" />
         <option name="m_minLength" value="1" />
         <option name="m_maxLength" value="70" />
       </extension>
