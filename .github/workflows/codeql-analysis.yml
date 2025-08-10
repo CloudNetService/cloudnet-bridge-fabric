@@ -1,6 +1,9 @@
 name: "CodeQL"
 
 on:
+  push:
+    branches: [ "main" ]
+    tags-ignore: [ "**" ]
   pull_request:
   schedule:
     - cron: '00 2 * * *'
@@ -10,6 +13,7 @@ concurrency:
   group: cq-${{ github.event.pull_request.number || github.job }}
 
 permissions:
+  contents: read
   security-events: write
 
 jobs:
