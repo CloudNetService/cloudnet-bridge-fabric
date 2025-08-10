@@ -14,6 +14,12 @@ open [an issue](https://github.com/CloudNetService/cloudnet-bridge-fabric/issues
 The core bridge mod is still within the main CloudNet repository, this repo only provides the implementations for
 specific minecraft versions.
 
+## Supported Minecraft versions
+
+| Minecraft Version      | Subproject | Supported          |
+|------------------------|------------|--------------------|
+| 1.21.6, 1.21.7, 1.21.8 | v1_21_6    | :white_check_mark: |
+
 ## Links
 
 - [Support Discord](https://discord.cloudnetservice.eu)
