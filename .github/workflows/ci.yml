@@ -43,7 +43,7 @@ jobs:
           echo "version=$CALVER_BASE-$SHORT_COMMIT_SHA" >> $GITHUB_OUTPUT
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Java
         uses: actions/setup-java@v4
