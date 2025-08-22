@@ -8,7 +8,7 @@ fabricLoom = "1.11.7"
 # libs
 annotations = "26.0.2"
 fabricLoader = "0.17.0"
-cloudnet = "4.0.0-RC14-SNAPSHOT"
+cloudnet = "4.0.0-RC15-SNAPSHOT"
 fabricMixin = "0.16.3+mixin.0.8.7"
 
 [libraries]
