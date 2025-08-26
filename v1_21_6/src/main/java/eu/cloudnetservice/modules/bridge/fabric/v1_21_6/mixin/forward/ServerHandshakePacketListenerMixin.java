@@ -18,6 +18,7 @@ package eu.cloudnetservice.modules.bridge.fabric.v1_21_6.mixin.forward;
 
 import com.google.gson.Gson;
 import com.mojang.authlib.properties.Property;
+import eu.cloudnetservice.modules.bridge.fabric.Constants;
 import eu.cloudnetservice.modules.bridge.fabric.UuidUtil;
 import eu.cloudnetservice.modules.bridge.fabric.v1_21_6.forward.ForwardingDataAccumulator;
 import java.net.InetSocketAddress;
@@ -83,7 +84,7 @@ public abstract class ServerHandshakePacketListenerMixin {
     if (hostnameParts.length != 3 && hostnameParts.length != 4) {
       // bungee forwarding info missing
       var disconnectReason = Component
-        .literal("If you wish to use IP forwarding, please enable it in your BungeeCord config as well!")
+        .literal(Constants.NO_BUNGEE_FORWARD_INFO_DISCONNECT_REASON)
         .withStyle(ChatFormatting.RED);
       this.connection.send(new ClientboundLoginDisconnectPacket(disconnectReason));
       this.connection.disconnect(disconnectReason);
