@@ -18,7 +18,7 @@ package eu.cloudnetservice.modules.bridge.fabric.v1_20_5.mixin.forward;
 
 import com.google.gson.Gson;
 import com.mojang.authlib.properties.Property;
-import com.mojang.util.UndashedUuid;
+import eu.cloudnetservice.modules.bridge.fabric.UuidUtil;
 import eu.cloudnetservice.modules.bridge.fabric.v1_20_5.forward.ForwardingDataAccumulator;
 import java.net.InetSocketAddress;
 import java.util.List;
@@ -105,7 +105,7 @@ public abstract class ServerHandshakePacketListenerMixin {
     var channel = this.connection.channel;
     var forwardDataAccumulator = new ForwardingDataAccumulator();
     channel.attr(ForwardingDataAccumulator.ACCUMULATOR_KEY).set(forwardDataAccumulator);
-    forwardDataAccumulator.uniqueId = UndashedUuid.fromString(actualUserUniqueId);
+    forwardDataAccumulator.uniqueId = UuidUtil.parseUndashedUuid(actualUserUniqueId);
 
     // add profile properties if any were forwarded
     if (actualProfileProperties != null) {
