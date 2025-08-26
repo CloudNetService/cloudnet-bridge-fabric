@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+package eu.cloudnetservice.modules.bridge.fabric;
 
-pluginManagement {
-  repositories {
-    gradlePluginPortal()
-    maven {
-      name = "Fabric"
-      url = uri("https://maven.fabricmc.net/")
-    }
+/**
+ * Shared constants that are the same across multiple minecraft versions.
+ *
+ * @since 2025.08.26
+ */
+public final class Constants {
+
+  /**
+   * Disconnect reason if no bungeecord info was forwarded in the handshake packet.
+   */
+  public static final String NO_BUNGEE_FORWARD_INFO_DISCONNECT_REASON =
+    "If you wish to use IP forwarding, please enable it in your BungeeCord config as well!";
+
+  private Constants() {
+    throw new UnsupportedOperationException();
   }
 }
-
-rootProject.name = "cloudnet-bridge-fabric"
-
-include(":common")
-include(":v1_18_2")
-include(":v1_19_4")
-include(":v1_20_5")
-include(":v1_21_6")
