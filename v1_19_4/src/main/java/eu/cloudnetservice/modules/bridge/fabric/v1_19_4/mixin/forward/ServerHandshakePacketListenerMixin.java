@@ -44,7 +44,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * Reads the bungeecord forwarding info from the client intention packet and stores it for later use during the login
  * process.
  *
- * @since 1.0
+ * @since 2025.08.26
  */
 @Environment(EnvType.SERVER)
 @Mixin(ServerHandshakePacketListenerImpl.class)

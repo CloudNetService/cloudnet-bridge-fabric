@@ -28,7 +28,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 /**
  * Expands the hostname length to fit the forwarded bungee information.
  *
- * @since 1.0
+ * @since 2025.08.11
  */
 @Environment(EnvType.SERVER)
 @Mixin(ClientIntentionPacket.class)

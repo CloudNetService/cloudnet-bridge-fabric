@@ -33,7 +33,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 /**
  * Applies the forwarded bungeecord data to the client after the login hello packet was received.
  *
- * @since 1.0
+ * @since 2025.08.11
  */
 @Environment(EnvType.SERVER)
 @Mixin(ServerLoginPacketListenerImpl.class)

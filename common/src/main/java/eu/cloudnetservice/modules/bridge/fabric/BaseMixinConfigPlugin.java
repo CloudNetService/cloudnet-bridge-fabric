@@ -27,7 +27,7 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 /**
  * Mixin plugin implementation to remove boilerplate from subprojects.
  *
- * @since 1.0
+ * @since 2025.08.11
  */
 public abstract class BaseMixinConfigPlugin implements IMixinConfigPlugin {
 

@@ -27,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
  * Accessors for the server version specific implementations of the module.
  *
  * @param <S> the player type.
- * @since 1.0
+ * @since 2025.08.11
  */
 public interface BridgeAccessorSpec<S> {
 

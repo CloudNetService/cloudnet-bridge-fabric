@@ -22,7 +22,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Mixin plugin to conditionally apply forwarding mixins only if they are actually needed.
  *
- * @since 1.0
+ * @since 2025.08.26
  */
 public final class ForwardMixinPlugin extends BaseMixinConfigPlugin {
 

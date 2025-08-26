@@ -27,7 +27,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Accumulator for forwarded player data.
  *
- * @since 1.0
+ * @since 2025.08.26
  */
 public final class ForwardingDataAccumulator {
 

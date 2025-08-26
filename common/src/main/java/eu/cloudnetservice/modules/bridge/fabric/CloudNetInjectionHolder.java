@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * Holder that holds the most commonly used types from cloudnet. Access vía
  * {@link BridgeAccessorSpec#cloudnet_bridge$injectionHolder()}.
  *
- * @since 1.0
+ * @since 2025.08.11
  */
 @Singleton
 public record CloudNetInjectionHolder(

@@ -29,7 +29,7 @@ import org.jetbrains.annotations.NotNull;
  * Base implementation of the fabric bridge management for overrides in version specific modules.
  *
  * @param <S> the player type.
- * @since 1.0
+ * @since 2025.08.11
  */
 public abstract class BaseFabricBridgeManagement<S> extends PlatformBridgeManagement<S, NetworkPlayerServerInfo> {
 
