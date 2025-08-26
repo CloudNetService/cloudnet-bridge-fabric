@@ -26,6 +26,7 @@ jobs:
       fail-fast: true
       matrix:
         mc_version:
+          - 1.19.4
           - 1.20.5
           - 1.21.6
     outputs:
