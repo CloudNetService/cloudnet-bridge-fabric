@@ -4,6 +4,7 @@
 shadow = "9.0.2"
 spotless = "7.2.1"
 fabricLoom = "1.11.7"
+legacyLoom = "1.11.3"
 
 # libs
 annotations = "26.0.2"
@@ -24,5 +25,6 @@ cloudnetWrapper = { group = "eu.cloudnetservice.cloudnet", name = "wrapper-jvm-a
 [plugins]
 
 fabricLoom = { id = "fabric-loom", version.ref = "fabricLoom" }
+legacyLoom = { id = "legacy-looming", version.ref = "legacyLoom" }
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }

@@ -23,12 +23,17 @@ pluginManagement {
       name = "Fabric"
       url = uri("https://maven.fabricmc.net/")
     }
+    maven {
+      name = "Legacy-Fabric"
+      url = uri("https://maven.legacyfabric.net/")
+    }
   }
 }
 
 rootProject.name = "cloudnet-bridge-fabric"
 
 include(":common")
+include(":v1_13_2")
 include(":v1_14_4")
 include(":v1_15")
 include(":v1_16_2")

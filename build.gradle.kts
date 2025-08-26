@@ -24,6 +24,7 @@ plugins {
   alias(libs.plugins.spotless)
   alias(libs.plugins.shadow) apply false
   alias(libs.plugins.fabricLoom) apply false
+  alias(libs.plugins.legacyLoom) apply false
 }
 
 val targetJavaVersion = JavaVersion.VERSION_24
