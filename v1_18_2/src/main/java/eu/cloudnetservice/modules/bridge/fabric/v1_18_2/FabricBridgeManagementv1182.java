@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.v1_19_4;
+package eu.cloudnetservice.modules.bridge.fabric.v1_18_2;
 
 import eu.cloudnetservice.driver.service.ServiceInfoSnapshot;
 import eu.cloudnetservice.modules.bridge.fabric.BaseFabricBridgeManagement;
@@ -30,7 +30,7 @@ import net.minecraft.server.level.ServerPlayer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class FabricBridgeManagementv1194 extends BaseFabricBridgeManagement<ServerPlayer> {
+public final class FabricBridgeManagementv1182 extends BaseFabricBridgeManagement<ServerPlayer> {
 
   /**
    * Constructs a new instance of the bridge management.
@@ -38,7 +38,7 @@ public final class FabricBridgeManagementv1194 extends BaseFabricBridgeManagemen
    * @param bridgeAccessorSpec the accessor specification for the current server version.
    * @throws NullPointerException if the given accessor spec is null.
    */
-  public FabricBridgeManagementv1194(@NotNull BridgeAccessorSpec<ServerPlayer> bridgeAccessorSpec) {
+  public FabricBridgeManagementv1182(@NotNull BridgeAccessorSpec<ServerPlayer> bridgeAccessorSpec) {
     super(bridgeAccessorSpec);
   }
 

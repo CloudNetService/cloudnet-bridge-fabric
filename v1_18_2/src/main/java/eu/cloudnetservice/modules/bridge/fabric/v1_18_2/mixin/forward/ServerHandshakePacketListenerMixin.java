@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.v1_19_4.mixin.forward;
+package eu.cloudnetservice.modules.bridge.fabric.v1_18_2.mixin.forward;
 
 import com.google.gson.Gson;
 import com.mojang.authlib.properties.Property;
 import eu.cloudnetservice.modules.bridge.fabric.Constants;
 import eu.cloudnetservice.modules.bridge.fabric.UuidUtil;
-import eu.cloudnetservice.modules.bridge.fabric.v1_19_4.forward.ForwardingDataAccumulator;
+import eu.cloudnetservice.modules.bridge.fabric.v1_18_2.forward.ForwardingDataAccumulator;
 import java.net.InetSocketAddress;
 import java.util.List;
 import net.fabricmc.api.EnvType;

@@ -1,8 +1,8 @@
 {
   "required": true,
   "compatibilityLevel": "JAVA_16",
-  "package": "eu.cloudnetservice.modules.bridge.fabric.v1_19_4.mixin",
-  "plugin": "eu.cloudnetservice.modules.bridge.fabric.v1_19_4.forward.ForwardMixinPlugin",
+  "package": "eu.cloudnetservice.modules.bridge.fabric.v1_18_2.mixin",
+  "plugin": "eu.cloudnetservice.modules.bridge.fabric.v1_18_2.forward.ForwardMixinPlugin",
   "server": [
     "MinecraftServerMixin",
     "forward.ClientIntentionPacketMixin",

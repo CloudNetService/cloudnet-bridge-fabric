@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.v1_19_4.mixin;
+package eu.cloudnetservice.modules.bridge.fabric.v1_18_2.mixin;
 
 import eu.cloudnetservice.driver.inject.InjectionLayer;
 import eu.cloudnetservice.modules.bridge.fabric.BridgeAccessorSpec;
 import eu.cloudnetservice.modules.bridge.fabric.CloudNetInjectionHolder;
-import eu.cloudnetservice.modules.bridge.fabric.v1_19_4.FabricBridgeManagementv1194;
+import eu.cloudnetservice.modules.bridge.fabric.v1_18_2.FabricBridgeManagementv1182;
 import eu.cloudnetservice.modules.bridge.impl.platform.PlatformBridgeManagement;
 import eu.cloudnetservice.modules.bridge.player.NetworkPlayerServerInfo;
 import java.util.Collection;
@@ -77,7 +77,7 @@ public abstract class MinecraftServerMixin implements BridgeAccessorSpec<ServerP
   @Inject(at = @At("CTOR_HEAD"), method = "<init>")
   public void cloudnet_bridge$init(CallbackInfo ci) {
     this.cloudnet_bridge$injectionHolder = InjectionLayer.ext().instance(CloudNetInjectionHolder.class);
-    this.cloudnet_bridge$management = new FabricBridgeManagementv1194(this);
+    this.cloudnet_bridge$management = new FabricBridgeManagementv1182(this);
     this.cloudnet_bridge$management.registerServices(this.cloudnet_bridge$injectionHolder.serviceRegistry());
   }
 
