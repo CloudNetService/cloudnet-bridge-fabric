@@ -19,6 +19,7 @@ package eu.cloudnetservice.modules.bridge.fabric;
 import eu.cloudnetservice.driver.registry.ServiceRegistry;
 import eu.cloudnetservice.driver.service.ServiceInfoSnapshot;
 import eu.cloudnetservice.modules.bridge.impl.platform.PlatformBridgeManagement;
+import eu.cloudnetservice.modules.bridge.impl.platform.helper.ServerPlatformHelper;
 import eu.cloudnetservice.modules.bridge.player.NetworkPlayerServerInfo;
 import eu.cloudnetservice.modules.bridge.player.PlayerManager;
 import eu.cloudnetservice.wrapper.event.ServiceInfoPropertiesConfigureEvent;
@@ -34,6 +35,7 @@ import org.jetbrains.annotations.NotNull;
 public abstract class BaseFabricBridgeManagement<S> extends PlatformBridgeManagement<S, NetworkPlayerServerInfo> {
 
   protected final BridgeAccessorSpec<S> bridgeAccessorSpec;
+  protected final ServerPlatformHelper serverPlatformHelper;
 
   /**
    * Constructs a new instance of the bridge management.
@@ -53,6 +55,7 @@ public abstract class BaseFabricBridgeManagement<S> extends PlatformBridgeManage
       injectionHolder.serviceProvider(),
       injectionHolder.wrapperConfiguration());
     this.bridgeAccessorSpec = bridgeAccessorSpec;
+    this.serverPlatformHelper = injectionHolder.serverPlatformHelper();
   }
 
   /**
@@ -95,5 +98,30 @@ public abstract class BaseFabricBridgeManagement<S> extends PlatformBridgeManage
     propertyHolder.append("Players", connectedPlayers);
     propertyHolder.append("Version", this.bridgeAccessorSpec.cloudnet_bridge$serverVersion());
     propertyHolder.append("Online-Count", this.bridgeAccessorSpec.cloudnet_bridge$playerCount());
+  }
+
+  /**
+   * Handles the join of a player onto the current service.
+   *
+   * @param player the player that joined.
+   * @since 2025.08.27
+   */
+  public void handlePlayerJoin(@NotNull S player) {
+    var playerInfo = this.createPlayerInformation(player);
+    this.serverPlatformHelper.sendChannelMessageLoginSuccess(playerInfo.uniqueId(), playerInfo);
+    this.serviceInfoHolder.publishServiceInfoUpdate();
+  }
+
+  /**
+   * Handles the leave of a player from the current service.
+   *
+   * @param player the player that left.
+   * @since 2025.08.27
+   */
+  public void handlePlayerLeave(@NotNull S player) {
+    var playerInfo = this.createPlayerInformation(player);
+    var ownServiceInfo = this.ownNetworkServiceInfo();
+    this.serverPlatformHelper.sendChannelMessageDisconnected(playerInfo.uniqueId(), ownServiceInfo);
+    this.serviceInfoHolder.publishServiceInfoUpdate();
   }
 }

@@ -4,6 +4,7 @@
   "package": "eu.cloudnetservice.modules.bridge.fabric.v1_19_4.mixin",
   "plugin": "eu.cloudnetservice.modules.bridge.fabric.v1_19_4.forward.ForwardMixinPlugin",
   "server": [
+    "PlayerListMixin",
     "MinecraftServerMixin",
     "forward.ClientIntentionPacketMixin",
     "forward.ServerHandshakePacketListenerMixin",
