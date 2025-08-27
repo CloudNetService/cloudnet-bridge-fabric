@@ -1,0 +1,5 @@
+accessWidener v2 named
+accessible    field     net/minecraft/network/packet/c2s/handshake/HandshakeC2SPacket     address             Ljava/lang/String;
+mutable       field     net/minecraft/network/packet/c2s/handshake/HandshakeC2SPacket     address             Ljava/lang/String;
+accessible    field     net/minecraft/network/ClientConnection                            channel             Lio/netty/channel/Channel;
+accessible    field     net/minecraft/network/ClientConnection                            address             Ljava/net/SocketAddress;
