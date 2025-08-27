@@ -18,6 +18,7 @@ specific minecraft versions.
 
 | Minecraft Version      | Subproject | Supported          |
 |------------------------|------------|--------------------|
+| 1.10.2                 | v1_10_2    | :white_check_mark: |
 | 1.11.2                 | v1_11_2    | :white_check_mark: |
 | 1.12.2                 | v1_12_2    | :white_check_mark: |
 | 1.13.2                 | v1_13_2    | :white_check_mark: |

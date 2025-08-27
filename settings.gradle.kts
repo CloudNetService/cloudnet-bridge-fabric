@@ -33,6 +33,7 @@ pluginManagement {
 rootProject.name = "cloudnet-bridge-fabric"
 
 include(":common")
+include(":v1_10_2")
 include(":v1_11_2")
 include(":v1_12_2")
 include(":v1_13_2")
