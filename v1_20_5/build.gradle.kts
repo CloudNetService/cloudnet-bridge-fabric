@@ -27,9 +27,7 @@ dependencies {
   shaded(projects.common)
   modImplementation(libs.fabricLoader)
   minecraft("com.mojang:minecraft:$minecraftVersion")
-  mappings(loom.layered {
-    officialMojangMappings()
-  })
+  mappings(loom.officialMojangMappings())
 }
 
 loom {
