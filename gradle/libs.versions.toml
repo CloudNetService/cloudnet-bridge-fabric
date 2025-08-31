@@ -1,7 +1,7 @@
 [versions]
 
 # plugins
-shadow = "9.0.2"
+shadow = "9.1.0"
 spotless = "7.2.1"
 fabricLoom = "1.11.7"
 legacyLoom = "1.11.3"
