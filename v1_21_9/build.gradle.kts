@@ -20,7 +20,7 @@ plugins {
   alias(libs.plugins.fabricLoom)
 }
 
-val minecraftVersion = "1.21.9-rc1"
+val minecraftVersion = "1.21.9"
 val parchmentVersion = "2025.06.29"
 val supportedVersionRange = ">=1.21.9 <1.21.10"
 
