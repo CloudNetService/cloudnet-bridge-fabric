@@ -41,6 +41,10 @@ subprojects {
   repositories {
     mavenCentral()
     maven {
+      name = "derklaro-releases"
+      url = uri("https://repository.derklaro.dev/releases/")
+    }
+    maven {
       name = "Maven Central Snapshots"
       url = uri("https://central.sonatype.com/repository/maven-snapshots/")
     }
