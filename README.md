@@ -44,5 +44,5 @@ specific minecraft versions.
 
 ## Compile from source
 
-To compile this project you need JDK 24 and an internet connection. Then clone this repository and run `./gradlew build`
+To compile this project you need JDK 25 and an internet connection. Then clone this repository and run `./gradlew build`
 inside the cloned project.

@@ -27,7 +27,7 @@ plugins {
   alias(libs.plugins.legacyLoom) apply false
 }
 
-val targetJavaVersion = JavaVersion.VERSION_24
+val targetJavaVersion = JavaVersion.VERSION_25
 
 allprojects {
   group = "eu.cloudnetservice.cloudnet"
