@@ -90,7 +90,7 @@ jobs:
         run: ./gradlew :${{ env.PROJECT_NAME }}:build -Pversion=${{ steps.resolve_variables.outputs.version }} --stacktrace
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           retention-days: 1
           name: cloudnet_version_bridge_${{ env.PROJECT_NAME }}
@@ -102,7 +102,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           path: artifacts/
 
@@ -112,7 +112,7 @@ jobs:
           find artifacts -type f -name "*.jar" -exec cp {} merged/ \;
 
       - name: Upload merged artifact zip
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           path: merged/
           name: cloudnet_version_bridge_merged
@@ -128,7 +128,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           path: artifacts/
           name: cloudnet_version_bridge_merged
