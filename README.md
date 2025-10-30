@@ -18,6 +18,7 @@ specific minecraft versions.
 
 | Minecraft Version      | Subproject | Supported          |
 |------------------------|------------|--------------------|
+| 25w44a                 | next       | :white_check_mark: |
 | 1.21.9, 1.21.10        | v1_21_9    | :white_check_mark: |
 | 1.21.6, 1.21.7, 1.21.8 | v1_21_6    | :white_check_mark: |
 | 1.20.5, 1.20.6         | v1_20_5    | :white_check_mark: |
