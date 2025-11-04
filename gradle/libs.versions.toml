@@ -3,8 +3,8 @@
 # plugins
 shadow = "9.2.2"
 spotless = "8.0.0"
-fabricLoom = "1.12.2"
-legacyLoom = "1.11.8"
+fabricLoom = "1.12.7"
+legacyLoom = "1.12.1"
 
 # libs
 annotations = "26.0.2-1"
