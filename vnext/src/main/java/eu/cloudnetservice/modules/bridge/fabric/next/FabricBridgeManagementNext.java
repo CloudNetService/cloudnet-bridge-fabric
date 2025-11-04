@@ -26,7 +26,7 @@ import eu.cloudnetservice.modules.bridge.player.executor.PlayerExecutor;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.function.BiFunction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.permissions.Permission;
 import net.minecraft.server.permissions.Permissions;
@@ -40,8 +40,8 @@ public final class FabricBridgeManagementNext extends BaseFabricBridgeManagement
    * permission), or the owner permission level in case the given permission string is not a valid resource location.
    */
   private static final BiFunction<ServerPlayer, String, Boolean> PERMISSION_FUNCTION = (player, permission) -> {
-    var permLocation = ResourceLocation.tryParse(permission);
-    var perm = permLocation != null ? Permission.Atom.create(permLocation) : Permissions.COMMANDS_OWNER;
+    var permIdentifier = Identifier.tryParse(permission);
+    var perm = permIdentifier != null ? Permission.Atom.create(permIdentifier) : Permissions.COMMANDS_OWNER;
     return player.permissions().hasPermission(perm);
   };
 
