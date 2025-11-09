@@ -16,25 +16,25 @@ specific minecraft versions.
 
 ## Supported Minecraft versions
 
-| Minecraft Version      | Subproject | Supported          |
-|------------------------|------------|--------------------|
-| 25w45a                 | vnext      | :white_check_mark: |
-| 1.21.9, 1.21.10        | v1_21_9    | :white_check_mark: |
-| 1.21.6, 1.21.7, 1.21.8 | v1_21_6    | :white_check_mark: |
-| 1.20.5, 1.20.6         | v1_20_5    | :white_check_mark: |
-| 1.19.4                 | v1_19_4    | :white_check_mark: |
-| 1.18.2                 | v1_18_2    | :white_check_mark: |
-| 1.17, 1.17.1           | v1_17      | :white_check_mark: |
-| 1.16.2 - 1.16.5        | v1_16_2    | :white_check_mark: |
-| 1.15, 1.15.1, 1.15.2   | v1_15      | :white_check_mark: |
-| 1.14.4                 | v1_14_4    | :white_check_mark: |
-| 1.13.2                 | v1_13_2    | :white_check_mark: |
-| 1.12.2                 | v1_12_2    | :white_check_mark: |
-| 1.11.2                 | v1_11_2    | :white_check_mark: |
-| 1.10.2                 | v1_10_2    | :white_check_mark: |
-| 1.9.4                  | v1_9_4     | :white_check_mark: |
-| 1.8.2 - 1.8.9          | v1_8_2     | :white_check_mark: |
-| 1.7.6 - 1.7.10         | v1_7_6     | :white_check_mark: |
+| Minecraft Version      | Subproject | Supported                                              |
+|------------------------|------------|--------------------------------------------------------|
+| 25w45a                 | vnext      | ![STS](https://img.shields.io/badge/Short_Term-yellow) |
+| 1.21.9, 1.21.10        | v1_21_9    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.21.6, 1.21.7, 1.21.8 | v1_21_6    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.20.5, 1.20.6         | v1_20_5    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.19.4                 | v1_19_4    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.18.2                 | v1_18_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.17, 1.17.1           | v1_17      | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.16.2 - 1.16.5        | v1_16_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.15, 1.15.1, 1.15.2   | v1_15      | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.14.4                 | v1_14_4    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.13.2                 | v1_13_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.12.2                 | v1_12_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.11.2                 | v1_11_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.10.2                 | v1_10_2    | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.9.4                  | v1_9_4     | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.8.2 - 1.8.9          | v1_8_2     | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
+| 1.7.6 - 1.7.10         | v1_7_6     | ![LTS](https://img.shields.io/badge/Long_Term-green)   |
 
 ## Links
 
