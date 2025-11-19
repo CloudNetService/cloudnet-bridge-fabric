@@ -20,9 +20,9 @@ plugins {
   alias(libs.plugins.fabricLoom)
 }
 
-val minecraftVersion = "25w46a"
+val minecraftVersion = "1.21.11-pre1"
 val parchmentVersion = "2025.10.05"
-val supportedVersionRange = "25w46a"
+val supportedVersionRange = "1.21.11-pre1"
 
 dependencies {
   shaded(projects.common)
