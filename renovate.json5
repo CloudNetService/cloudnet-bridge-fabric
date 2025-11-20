@@ -28,6 +28,13 @@
       "groupName": "all dependencies with patch changes",
     },
     {
+      "matchPackageNames": [
+        "fabric-loom",
+        "legacy-looming",
+      ],
+      "groupName": "the loom dependencies",
+    },
+    {
       "description": "Dependencies whose updates shouldn't be done automatically",
       "matchPackageNames": [
         "com.mojang:**", // cannot be updated automatically
