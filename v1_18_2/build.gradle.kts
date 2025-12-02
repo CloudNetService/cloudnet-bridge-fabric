@@ -17,7 +17,7 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
-  alias(libs.plugins.fabricLoom)
+  alias(libs.plugins.fabricLoomRemap)
 }
 
 val minecraftVersion = "1.18.2"

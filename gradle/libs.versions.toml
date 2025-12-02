@@ -3,7 +3,7 @@
 # plugins
 shadow = "9.2.2"
 spotless = "8.1.0"
-fabricLoom = "1.13.6"
+fabricLoom = "1.14.1"
 legacyLoom = "1.13.2"
 
 # libs
@@ -24,7 +24,8 @@ cloudnetWrapper = { group = "eu.cloudnetservice.cloudnet", name = "wrapper-jvm-a
 
 [plugins]
 
-fabricLoom = { id = "fabric-loom", version.ref = "fabricLoom" }
-legacyLoom = { id = "legacy-looming", version.ref = "legacyLoom" }
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+legacyLoom = { id = "legacy-looming", version.ref = "legacyLoom" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+fabricLoomNoRemap = { id = "net.fabricmc.fabric-loom", version.ref = "fabricLoom" }
+fabricLoomRemap = { id = "net.fabricmc.fabric-loom-remap", version.ref = "fabricLoom" }
