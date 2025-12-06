@@ -29,10 +29,11 @@
     },
     {
       "matchPackageNames": [
-        "fabric-loom",
         "legacy-looming",
+        "net.fabricmc.fabric-loom",
+        "net.fabricmc.fabric-loom-remap",
       ],
-      "groupName": "the loom dependencies",
+      "groupName": "the loom plugins",
     },
     {
       "description": "Dependencies whose updates shouldn't be done automatically",
