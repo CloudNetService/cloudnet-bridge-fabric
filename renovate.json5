@@ -18,14 +18,6 @@
       "groupName": "github actions",
     },
     {
-      "matchPackageNames": [
-        "legacy-looming",
-        "net.fabricmc.fabric-loom",
-        "net.fabricmc.fabric-loom-remap",
-      ],
-      "groupName": "the loom plugins",
-    },
-    {
       "matchUpdateTypes": [
         "patch",
       ],
@@ -34,6 +26,13 @@
         "!gradle",
       ],
       "groupName": "all dependencies with patch changes",
+    },
+    {
+      "matchPackageNames": [
+        "legacy-looming:**",
+        "net.fabricmc.fabric-loom**",
+      ],
+      "groupName": "the loom plugins",
     },
     {
       "description": "Dependencies whose updates shouldn't be done automatically",
