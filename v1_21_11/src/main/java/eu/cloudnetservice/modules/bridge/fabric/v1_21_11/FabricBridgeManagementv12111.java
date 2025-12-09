@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.next;
+package eu.cloudnetservice.modules.bridge.fabric.v1_21_11;
 
 import eu.cloudnetservice.driver.service.ServiceInfoSnapshot;
 import eu.cloudnetservice.modules.bridge.fabric.BaseFabricBridgeManagement;
@@ -33,7 +33,7 @@ import net.minecraft.server.permissions.Permissions;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public final class FabricBridgeManagementNext extends BaseFabricBridgeManagement<ServerPlayer> {
+public final class FabricBridgeManagementv12111 extends BaseFabricBridgeManagement<ServerPlayer> {
 
   /**
    * Function to validate the permission of a player. Either requires the exact permission string (as an {@code atom}
@@ -51,7 +51,7 @@ public final class FabricBridgeManagementNext extends BaseFabricBridgeManagement
    * @param bridgeAccessorSpec the accessor specification for the current server version.
    * @throws NullPointerException if the given accessor spec is null.
    */
-  public FabricBridgeManagementNext(@NotNull BridgeAccessorSpec<ServerPlayer> bridgeAccessorSpec) {
+  public FabricBridgeManagementv12111(@NotNull BridgeAccessorSpec<ServerPlayer> bridgeAccessorSpec) {
     super(bridgeAccessorSpec);
   }
 
