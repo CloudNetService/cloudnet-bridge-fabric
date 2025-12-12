@@ -81,7 +81,7 @@ jobs:
           build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
 
       - name: Setup Loom cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: '.gradle/loom-cache'
           restore-keys: ${{ runner.os }}-${{ matrix.mc_version }}-gradle-loom-
