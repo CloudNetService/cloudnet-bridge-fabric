@@ -17,8 +17,8 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
-  alias(libs.plugins.legacyLoom)
-  alias(libs.plugins.fabricLoomRemap)
+  id("legacy-looming")
+  id("net.fabricmc.fabric-loom-remap")
 }
 
 val minecraftVersion = "1.10.2"
@@ -53,7 +53,7 @@ tasks.processResources {
     filter(ReplaceTokens::class, mapOf("tokens" to tokens))
   }
 
-  from(rootProject.layout.projectDirectory.dir(".mod_resources")) {
+  from(rootProject.isolated.projectDirectory.dir(".mod_resources")) {
     into("")
     include("*.json")
   }

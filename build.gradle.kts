@@ -25,6 +25,7 @@ plugins {
   alias(libs.plugins.shadow) apply false
   alias(libs.plugins.legacyLoom) apply false
   alias(libs.plugins.fabricLoomRemap) apply false
+  alias(libs.plugins.fabricLoomNoRemap) apply false
 }
 
 val targetJavaVersion = JavaVersion.VERSION_25
