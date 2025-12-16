@@ -23,7 +23,7 @@ plugins {
 
 val minecraftVersion = "1.11.2"
 val yarnVersion = "1.11.2+build.571"
-val supportedVersionRange = "1.11.2"
+val supportedVersionRange = minecraftVersion
 
 dependencies {
   shaded(projects.common)

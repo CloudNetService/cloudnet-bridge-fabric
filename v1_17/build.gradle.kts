@@ -22,7 +22,7 @@ plugins {
 
 val minecraftVersion = "1.17"
 val parchmentVersion = "2021.07.21"
-val supportedVersionRange = "~1.17"
+val supportedVersionRange = "~$minecraftVersion"
 
 dependencies {
   shaded(projects.common)

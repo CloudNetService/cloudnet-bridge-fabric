@@ -21,7 +21,7 @@ plugins {
 }
 
 val minecraftVersion = "1.20.5"
-val supportedVersionRange = "~1.20.5"
+val supportedVersionRange = "~$minecraftVersion"
 
 dependencies {
   shaded(projects.common)
