@@ -1,0 +1,5 @@
+accessWidener v2 official
+accessible    field     net/minecraft/network/protocol/handshake/ClientIntentionPacket    hostName            Ljava/lang/String;
+mutable       field     net/minecraft/network/protocol/handshake/ClientIntentionPacket    hostName            Ljava/lang/String;
+accessible    field     net/minecraft/network/Connection                                  channel             Lio/netty/channel/Channel;
+accessible    field     net/minecraft/network/Connection                                  address             Ljava/net/SocketAddress;

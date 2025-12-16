@@ -43,6 +43,7 @@ jobs:
           - 1.21.6
           - 1.21.9
           - 1.21.11
+          - next
     outputs:
       version: ${{ steps.resolve_variables.outputs.version }}
     steps:
