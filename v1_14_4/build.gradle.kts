@@ -21,7 +21,7 @@ plugins {
 }
 
 val minecraftVersion = "1.14.4"
-val yarnVersion = "1.14.4+build.18"
+val yarnVersion = "1.21.11+build.3"
 val supportedVersionRange = minecraftVersion
 
 dependencies {
