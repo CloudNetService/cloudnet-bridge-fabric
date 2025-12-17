@@ -91,12 +91,21 @@ jobs:
       - name: Run build
         run: ./gradlew :${{ env.PROJECT_NAME }}:build -Pversion=${{ steps.resolve_variables.outputs.version }} --stacktrace
 
-      - name: Upload artifact
+      - name: Upload regular artifact
         uses: actions/upload-artifact@v6
+        if: ${{ matrix.mc_version != 'next' }}
         with:
           retention-days: 1
           name: cloudnet_version_bridge_${{ env.PROJECT_NAME }}
           path: ${{ env.PROJECT_NAME }}/build/libs/${{ env.OUTPUT_FILE_NAME }}
+
+      - name: Upload next artifact
+        uses: actions/upload-artifact@v6
+        if: ${{ matrix.mc_version == 'next' }} # next is special because the target minecraft version is dynamic
+        with:
+          retention-days: 1
+          name: cloudnet_version_bridge_${{ env.PROJECT_NAME }}
+          path: ${{ env.PROJECT_NAME }}/build/libs/bridge_*.jar
 
   merge_jars:
     name: Merge jars
