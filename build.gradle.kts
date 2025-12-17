@@ -42,6 +42,14 @@ subprojects {
   repositories {
     mavenCentral()
     maven {
+      name = "Fabric"
+      url = uri("https://maven.fabricmc.net/")
+    }
+    maven {
+      name = "Legacy-Fabric"
+      url = uri("https://maven.legacyfabric.net/")
+    }
+    maven {
       name = "derklaro-releases"
       url = uri("https://repository.derklaro.dev/releases/")
     }
