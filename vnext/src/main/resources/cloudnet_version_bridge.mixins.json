@@ -1,6 +1,6 @@
 {
   "required": true,
-  "compatibilityLevel": "JAVA_16",
+  "compatibilityLevel": "JAVA_25",
   "package": "eu.cloudnetservice.modules.bridge.fabric.vnext.mixin",
   "plugin": "eu.cloudnetservice.modules.bridge.fabric.vnext.forward.ForwardMixinPlugin",
   "server": [
