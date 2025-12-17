@@ -35,6 +35,19 @@
       "groupName": "the loom plugins",
     },
     {
+      "description": "Disable major/minor/patch updates for yarn",
+      "matchPackageNames": [
+        "net.fabricmc:yarn",
+        "net.legacyfabric:yarn",
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+      ],
+      "enabled": false,
+    },
+    {
       "description": "Dependencies whose updates shouldn't be done automatically",
       "matchPackageNames": [
         "com.mojang:**", // cannot be updated automatically
