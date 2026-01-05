@@ -21,7 +21,7 @@ plugins {
 }
 
 val minecraftVersion = "1.21.11"
-val parchmentVersion = "2025.10.05"
+val parchmentVersion = "2025.12.20"
 val supportedVersionRange = ">=$minecraftVersion <1.21.12"
 
 dependencies {
@@ -30,7 +30,7 @@ dependencies {
   minecraft("com.mojang:minecraft:$minecraftVersion")
   mappings(loom.layered {
     officialMojangMappings()
-    // parchment("org.parchmentmc.data:parchment-$minecraftVersion:$parchmentVersion@zip")
+    parchment("org.parchmentmc.data:parchment-$minecraftVersion:$parchmentVersion@zip")
   })
 }
 
