@@ -1,7 +1,7 @@
 [versions]
 
 # plugins
-shadow = "9.3.0"
+shadow = "9.3.1"
 spotless = "8.1.0"
 fabricLoom = "1.14.10"
 legacyLoom = "1.14.1"
@@ -9,7 +9,7 @@ legacyLoom = "1.14.1"
 # libs
 annotations = "26.0.2-1"
 fabricLoader = "0.18.4"
-cloudnet = "4.0.0-RC16-SNAPSHOT"
+cloudnet = "4.0.0-RC17-SNAPSHOT"
 fabricMixin = "0.17.0+mixin.0.8.7"
 
 [libraries]
