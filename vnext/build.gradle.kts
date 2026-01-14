@@ -20,7 +20,7 @@ plugins {
   id("net.fabricmc.fabric-loom")
 }
 
-val minecraftVersion = "26.1-snapshot-1"
+val minecraftVersion = "26.1-snapshot-3"
 val supportedVersionRange = ">=$minecraftVersion <26.2"
 
 dependencies {
