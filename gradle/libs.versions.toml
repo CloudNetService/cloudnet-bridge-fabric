@@ -2,7 +2,7 @@
 
 # plugins
 shadow = "9.3.1"
-spotless = "8.1.0"
+spotless = "8.2.1"
 fabricLoom = "1.14.10"
 legacyLoom = "1.14.1"
 
