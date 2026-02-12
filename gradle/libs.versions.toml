@@ -4,7 +4,7 @@
 shadow = "9.3.1"
 spotless = "8.2.1"
 fabricLoom = "1.15.3"
-legacyLoom = "1.14.1"
+legacyLoom = "1.15.3"
 
 # libs
 annotations = "26.0.2-1"
