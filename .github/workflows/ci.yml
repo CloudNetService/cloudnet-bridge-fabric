@@ -92,7 +92,7 @@ jobs:
         run: ./gradlew :${{ env.PROJECT_NAME }}:build -Pversion=${{ steps.resolve_variables.outputs.version }} --stacktrace
 
       - name: Upload regular artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ matrix.mc_version != 'next' }}
         with:
           retention-days: 1
@@ -100,7 +100,7 @@ jobs:
           path: ${{ env.PROJECT_NAME }}/build/libs/${{ env.OUTPUT_FILE_NAME }}
 
       - name: Upload next artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ matrix.mc_version == 'next' }} # next is special because the target minecraft version is dynamic
         with:
           retention-days: 1
@@ -113,7 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts/
 
@@ -123,7 +123,7 @@ jobs:
           find artifacts -type f -name "*.jar" -exec cp {} merged/ \;
 
       - name: Upload merged artifact zip
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           path: merged/
           name: cloudnet_version_bridge_merged
@@ -139,7 +139,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts/
           name: cloudnet_version_bridge_merged
