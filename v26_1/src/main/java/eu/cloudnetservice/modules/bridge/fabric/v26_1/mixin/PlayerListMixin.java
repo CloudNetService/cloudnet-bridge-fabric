@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.vnext.mixin;
+package eu.cloudnetservice.modules.bridge.fabric.v26_1.mixin;
 
 import eu.cloudnetservice.modules.bridge.fabric.BaseFabricBridgeManagement;
 import eu.cloudnetservice.modules.bridge.fabric.BridgeAccessorSpec;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.vnext.forward;
+package eu.cloudnetservice.modules.bridge.fabric.v26_1.forward;
 
 import eu.cloudnetservice.modules.bridge.fabric.BaseMixinConfigPlugin;
 import org.jetbrains.annotations.NotNull;

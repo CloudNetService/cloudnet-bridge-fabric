@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.vnext.mixin.forward;
+package eu.cloudnetservice.modules.bridge.fabric.v26_1.mixin.forward;
 
 import com.mojang.authlib.GameProfile;
-import eu.cloudnetservice.modules.bridge.fabric.vnext.forward.ForwardingDataAccumulator;
+import eu.cloudnetservice.modules.bridge.fabric.v26_1.forward.ForwardingDataAccumulator;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.network.Connection;

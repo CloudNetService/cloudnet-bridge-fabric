@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.vnext.forward;
+package eu.cloudnetservice.modules.bridge.fabric.v26_1.forward;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimaps;

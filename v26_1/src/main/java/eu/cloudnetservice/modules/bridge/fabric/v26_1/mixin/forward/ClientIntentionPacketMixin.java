@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package eu.cloudnetservice.modules.bridge.fabric.vnext.mixin.forward;
+package eu.cloudnetservice.modules.bridge.fabric.v26_1.mixin.forward;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

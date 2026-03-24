@@ -1,8 +1,8 @@
 {
   "required": true,
   "compatibilityLevel": "JAVA_25",
-  "package": "eu.cloudnetservice.modules.bridge.fabric.vnext.mixin",
-  "plugin": "eu.cloudnetservice.modules.bridge.fabric.vnext.forward.ForwardMixinPlugin",
+  "package": "eu.cloudnetservice.modules.bridge.fabric.v26_1.mixin",
+  "plugin": "eu.cloudnetservice.modules.bridge.fabric.v26_1.forward.ForwardMixinPlugin",
   "server": [
     "PlayerListMixin",
     "MinecraftServerMixin",
