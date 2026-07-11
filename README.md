@@ -21,7 +21,7 @@ specific Minecraft versions.
 
 | Minecraft Version      | Subproject | Supported                                             |
 |------------------------|------------|-------------------------------------------------------|
-| 26.1                   | v26_1      | ![LTS](https://img.shields.io/badge/Long_Term-005000) |
+| 26.1, 26.2             | v26_1      | ![LTS](https://img.shields.io/badge/Long_Term-005000) |
 | 1.21.11                | v1_21_11   | ![LTS](https://img.shields.io/badge/Long_Term-005000) |
 | 1.21.9, 1.21.10        | v1_21_9    | ![LTS](https://img.shields.io/badge/Long_Term-005000) |
 | 1.21.6, 1.21.7, 1.21.8 | v1_21_6    | ![LTS](https://img.shields.io/badge/Long_Term-005000) |
