@@ -59,17 +59,17 @@ jobs:
           echo "version=$CALVER_BASE-$SHORT_COMMIT_SHA" >> $GITHUB_OUTPUT
 
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Setup Java
-        uses: actions/setup-java@v5
+        uses: actions/setup-java@v6
         with:
           java-version: 25
           check-latest: true
           distribution: 'zulu'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v5
+        uses: gradle/actions/setup-gradle@v6
         env:
           GRADLE_BUILD_ACTION_CACHE_KEY_PREFIX: ${{ matrix.mc_version }}/
         with:
@@ -82,7 +82,7 @@ jobs:
           build-scan-terms-of-use-url: "https://gradle.com/terms-of-service"
 
       - name: Setup Loom cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: '.gradle/loom-cache'
           restore-keys: ${{ runner.os }}-${{ matrix.mc_version }}-gradle-loom-
@@ -92,7 +92,7 @@ jobs:
         run: ./gradlew :${{ env.PROJECT_NAME }}:build -Pversion=${{ steps.resolve_variables.outputs.version }} --stacktrace
 
       - name: Upload regular artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ matrix.mc_version != 'next' }}
         with:
           retention-days: 1
@@ -100,7 +100,7 @@ jobs:
           path: ${{ env.PROJECT_NAME }}/build/libs/${{ env.OUTPUT_FILE_NAME }}
 
       - name: Upload next artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         if: ${{ matrix.mc_version == 'next' }} # next is special because the target minecraft version is dynamic
         with:
           retention-days: 1
@@ -113,7 +113,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts/
 
@@ -123,7 +123,7 @@ jobs:
           find artifacts -type f -name "*.jar" -exec cp {} merged/ \;
 
       - name: Upload merged artifact zip
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           path: merged/
           name: cloudnet_version_bridge_merged
@@ -139,7 +139,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@v8
         with:
           path: artifacts/
           name: cloudnet_version_bridge_merged
