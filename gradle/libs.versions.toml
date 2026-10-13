@@ -10,7 +10,7 @@ legacyLoom = "1.16.1"
 annotations = "26.1.0"
 fabricLoader = "0.19.5"
 cloudnet = "4.0.0-RC18-SNAPSHOT"
-fabricMixin = "0.17.4+mixin.0.8.7"
+fabricMixin = "0.17.5+mixin.0.8.7"
 
 [libraries]
 
